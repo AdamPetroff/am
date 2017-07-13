@@ -1,0 +1,39 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+parameters:
+    admin_logout_target: /admin/login
+security:
+    encoders:
+        AppBundle\Entity\Admin: bcrypt
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        admin_provider:
+            entity:
+                class: AppBundle:Admin
+                property: username
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        admin:
+            security: false
+            pattern: ^/admin/
+            provider: admin_provider
+            anonymous: ~
+            guard:
+                authenticators:
+                    - app.security.admin_login_authenticator
+            logout:
+                path: /admin/logout
+                target: '%admin_logout_target%'
+                success_handler: admin_logout_success_handler
+            remember_me:
+                secret: '%secret%'
+                remember_me_parameter: admin_login[_remember_me]
+                lifetime: 604800
+                path: admin
