@@ -1,20 +1,12 @@
 {% extends 'admin/layout.html.twig' %}
 
-{% block javascript %}
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-{% endblock %}
-
 {% block content %}
+    <h1>new Article</h1>
 
-    <h1>{{ article.name }}</h1>
-    {% if article.mainImagePath is not empty %}<img width="500" src="{{ app.request.getBasePath }}{{ article.mainImagePath }}"/>{% endif %}
     {{ form_start(form_edit) }}
     {{ form_widget(form_edit) }}
     {{ form_end(form_edit) }}
 
-    {{ form(form_delete) }}
-
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=4wpqxwpy45nhi87lqsd3uovmfkgojaqe544eylfsc4okndsb"></script>
     <script>tinymce.init({ selector:'#article_text' });</script>
-
 {% endblock %}

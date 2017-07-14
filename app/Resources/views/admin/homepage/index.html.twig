@@ -1,5 +1,27 @@
 {% extends 'admin/layout.html.twig' %}
 
 {% block content %}
-    <p></p>
-{% endblock content %}
+    <h2>Articles</h2>
+
+    <a href="{{ path('admin_new_article') }}">new article</a>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Title</th>
+            <th>Id</th>
+            <th>Created at</th>
+            <th>Action</th>
+        </tr>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.name }}</td>
+                <td>{{ article.id }}</td>
+                <td>{{ article.createdAt|date('d. m. Y H:i') }}</td>
+                <td>
+                    <a href="{{ path('admin_edit_article', {'id': article.id}) }}">Edit</a>
+                    {#<a target="_blank" href="{{ path('front_display_article', {'url': article.url}) }}">Show</a>#}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{%  endblock %}
