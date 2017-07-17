@@ -8,6 +8,7 @@
     <table class="table table-bordered">
         <tr>
             <th>Title</th>
+            <th>Url</th>
             <th>Id</th>
             <th>Created at</th>
             <th>Action</th>
@@ -15,10 +16,11 @@
         {% for article in articles %}
             <tr>
                 <td>{{ article.name }}</td>
+                <td>{{ article.url }}</td>
                 <td>{{ article.id }}</td>
                 <td>{{ article.createdAt|date('d. m. Y H:i') }}</td>
                 <td>
-                    <a href="{{ path('admin_edit_article', {'id': article.id}) }}">Edit</a>
+                    <a href="{{ path('admin_edit_article', {'article': article.id}) }}">Edit</a>
                     {#<a target="_blank" href="{{ path('front_display_article', {'url': article.url}) }}">Show</a>#}
                 </td>
             </tr>

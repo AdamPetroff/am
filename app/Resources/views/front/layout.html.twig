@@ -4,12 +4,16 @@
     <title>{% block title %}{{ page_title|default('eshop') }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <script src="{{ asset('assets/js/jquery-3.1.1.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/colors.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/component.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
+    <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
 </head>
 <body>
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav cl-effect-10">
                 <li><img src="#" alt=""></li>
                 <li><a href="#">Domov</a></li>
                 <li><a href="#">O mne</a></li>
@@ -26,6 +30,7 @@
         <a href="#">audiomaster.sk</a>   Copyright © 2017
     </footer>
 
-    <script src="{{ asset('assets/js/bootstrap.min. js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/modernizr.js') }}"></script>
 </body>
 </html>

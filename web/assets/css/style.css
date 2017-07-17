@@ -1,8 +1,19 @@
-.c-article-height{
-    height: 200px;
-}
+/* yellow/orange/green/pink */
+.c-article-height {
+  height: 200px; }
 
-.c-article-content{
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
+.c-article-content {
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
+.call_to_action {
+  color: #f6f2f3;
+  background-color: #ff55fa;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: larger; }
+
+body {
+  background-color: #f6f2f3; }
+
+/*# sourceMappingURL=style.css.map */

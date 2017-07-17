@@ -15,6 +15,6 @@
     {{ form(form_delete) }}
 
     <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=4wpqxwpy45nhi87lqsd3uovmfkgojaqe544eylfsc4okndsb"></script>
-    <script>tinymce.init({ selector:'#article_text' });</script>
+    <script src="{{ asset('assets/js/mce_setup.js') }}"></script>
 
 {% endblock %}

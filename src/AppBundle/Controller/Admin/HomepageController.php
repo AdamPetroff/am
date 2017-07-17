@@ -62,9 +62,9 @@ class HomepageController extends Controller
     }
 
     /**
-     * @Route("/", name="admin_edit_article")
+     * @Route("/article/{article}", name="admin_edit_article")
      */
-    public function editArticleAction(Response $request, Article $article)
+    public function editArticleAction(Request $request, Article $article)
     {
         $form = $this->formFactory->create(ArticleType::class, $article);
         $form->handleRequest($request);

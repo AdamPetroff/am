@@ -112,4 +112,9 @@ class ArticleManager
     {
         return $this->repository->findNonDeleted();
     }
+
+    public function getArticleByUrl($url)
+    {
+        return $this->repository->findOneBy(["url" => $url]);
+    }
 }
