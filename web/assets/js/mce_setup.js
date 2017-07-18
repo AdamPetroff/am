@@ -9,7 +9,7 @@ tinymce.init({
     toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | fontsizeselect',
     toolbar2: 'print preview media | forecolor backcolor emoticons | codesample help',
     image_advtab: true,
-    content_css: "/assets/css/style.css,/assets/css/bootstrap.min.css,/assets/css/fancy_links.css",
+    content_css: "/assets/css/style.css,/assets/css/bootstrap.min.css,/assets/css/fancy-links.css",
     link_class_list: [
         {title: 'None', value: ''},
         {title: 'Call to action', value: 'call_to_action'},

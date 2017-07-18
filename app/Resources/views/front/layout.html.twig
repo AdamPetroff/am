@@ -2,24 +2,22 @@
 <html>
 <head>
     <title>{% block title %}{{ page_title|default('eshop') }}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/colors.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/component.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fancy-links.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
     <script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav cl-effect-10">
-                <li><img src="#" alt=""></li>
-                <li><a href="#">Domov</a></li>
-                <li><a href="#">O mne</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+        <ul class="nav navbar-nav cl-effect-12">
+            <li><img src="#" alt=""></li>
+            <li><a class="fancy-link" href="{{ path('index') }}">Domov</a></li>
+            <li><a class="fancy-link" href="o-mne">O mne</a></li>
+            <li><a class="fancy-link" href="kontakt">Kontakt</a></li>
+        </ul>
     </nav>
     <div id="js-flash-messages-wrapper">
         {% include 'front/_includes/_flash_messages.html.twig' %}
