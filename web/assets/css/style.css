@@ -28,7 +28,11 @@ a.link-color-1::before {
   color: #ff5722; }
 
 .navbar {
-  background: #042845; }
+  background: #042845;
+  background-image: url("/assets/images/speaker6.jpg");
+  background-size: cover;
+
+}
 
 .cl-effect-8 a::before,
 .cl-effect-8 a::after {
